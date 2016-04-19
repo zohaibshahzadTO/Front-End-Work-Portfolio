@@ -1,0 +1,271 @@
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
+footer {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  display: block;
+  background: #15181f url(../images/bg-texture.jpg) repeat;
+  color: #fff;
+}
+
+.footer {
+  background-color: black;
+  color: #8063ea;
+  padding: 36px 0;
+  line-height: 40px;
+  padding-top: 10px;
+  padding-bottom: 6px;
+  text-align: center;
+  font-family: 'Indie Flower', serif;
+  width: 100%;
+  bottom: 0;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  /* Chrome/Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+ */
+  /* Rules below not implemented in browsers yet */
+  -o-user-select: none;
+  user-select: none;
+}
+
+body {
+  font-family: lato, sans;
+}
+
+div.head h1 {
+  color: #444;
+  font-size: 4em;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.curs {
+  font-family: 'Indie Flower', serif;
+}
+
+.wrap {
+  position: relative;
+  margin: auto;
+  margin-top: 40px;
+  width: 400px;
+}
+
+.row {
+  text-align: center;
+  margin: 10px auto;
+}
+
+div.pop-up h3 {
+  text-align: center;
+  padding-top: 5px;
+  color: #444;
+}
+
+.inline {
+  display: inline-block;
+  margin: 10px 5px;
+  text-align: center;
+}
+
+.big {
+  font-size: 2em;
+  margin: 30px auto;
+}
+
+#sub {
+  color: #888;
+}
+
+.el,
+.el-s,
+.el-o {
+  vertical-align: middle;
+  display: inline-block;
+  height: 110px;
+  width: 110px;
+  font-size: 4.5em;
+  background-color: #61b2a3;
+  border-radius: 20px;
+  margin: auto 5px;
+  color: #f8f8f8;
+}
+
+.el-o {
+  margin-right: 20px;
+}
+
+.screen {
+  display: none;
+  background-color: rgba(10, 10, 10, 0.6);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.pop-up {
+  position: absolute;
+  width: 400px;
+  height: 175px;
+  border-radius: 20px;
+  background-color: #fff;
+  margin: 0 auto;
+  top: 250px;
+  left: 50%;
+  margin-left: -200px;
+  display: none;
+}
+
+.win {
+  background-color: #E6382B;
+}
+
+.tie {
+  background-color: #a5bcae;
+}
+
+.free {
+  cursor: pointer;
+  background-color: #71A299;
+}
+
+.free:hover {
+  background-color: #61b2a3;
+}
+
+
+/* Scaling for Mobile */
+
+@media screen and (max-width: 450px) {
+  .head {
+    display: none;
+  }
+  .wrap {
+    top: 30px;
+    -moz-transform: scale(0.7);
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    transform-origin: 0 0;
+    left: 50%;
+    margin-left: -140px;
+  }
+  .pop-up {
+    top: 100px;
+    -moz-transform: scale(0.7);
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    transform-origin: 0 0;
+    left: 50%;
+    margin-left: -140px;
+  }
+  footer {
+    background-color: black;
+    color: gray;
+    line-height: 15px;
+    padding-top: 10px;
+    padding-bottom: 6px;
+    position: fixed;
+    text-align: center;
+    font-family: cursive, sans-serif;
+    width: 100%;
+    bottom: 0;
+  }
+}
