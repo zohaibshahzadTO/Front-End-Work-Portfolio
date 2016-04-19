@@ -1,0 +1,87 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #5A0016;
+}
+
+h2, h4 {
+  text-align: center;
+  color: #3366CC;
+}
+
+h1 {
+  font-family: 'Calibri';
+  font-size: 150%;
+  text-align: center;
+  margin: 0px;
+  color: #F19953;
+}
+
+
+
+
+h2, p {
+  font-color: #3366CC;
+  font-family: 'Calibri';
+  margin-top: 10px;
+  color: #F19953;
+}
+
+button {
+  height: 50px;
+  border: none;
+}
+
+
+.calculator {
+  text-align: center;
+  width: 300px;
+  height: 350px;
+  border-radius: 10px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #56384d;
+  padding: 5px;
+}
+
+.buttons {
+  width: 275px;
+  text-align: center;
+  margin: 10px auto;
+}
+
+.button {
+  float: left;
+  margin: 2px;
+  width: 64.75px;
+  color: #f19953;
+  background: #fff;
+  cursor: pointer;
+}
+
+.textbox {
+  margin-top: 10px;
+  text-align: right;
+  border: none;
+  height: 25px;
+  width: 275px;
+  background-image: url("http://www.aapopuskala.fi/_img/paper.jpg");
+}
+
+footer {
+  background-color: black;
+  color: gray;
+  line-height: 15px;
+  padding-top: 10px;
+  padding-bottom: 6px;
+  position: fixed;
+  text-align: center;
+  font-family: cursive, sans-serif;
+  width: 100%;
+  bottom: 0;
+}
