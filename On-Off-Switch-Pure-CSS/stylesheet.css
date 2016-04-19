@@ -1,0 +1,79 @@
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+body {
+  background: -webkit-radial-gradient(#000000 15%, rgba(0, 0, 0, 0) 16%) 0 0, -webkit-radial-gradient(#000000 15%, rgba(0, 0, 0, 0) 16%) 8px 8px, -webkit-radial-gradient(rgba(255, 255, 255, 0.1) 15%, rgba(0, 0, 0, 0) 20%) 0 1px, -webkit-radial-gradient(rgba(255, 255, 255, 0.1) 15%, rgba(0, 0, 0, 0) 20%) 8px 9px;
+  background: radial-gradient(#000000 15%, rgba(0, 0, 0, 0) 16%) 0 0, radial-gradient(#000000 15%, rgba(0, 0, 0, 0) 16%) 8px 8px, radial-gradient(rgba(255, 255, 255, 0.1) 15%, rgba(0, 0, 0, 0) 20%) 0 1px, radial-gradient(rgba(255, 255, 255, 0.1) 15%, rgba(0, 0, 0, 0) 20%) 8px 9px;
+  background-color: #282828;
+  background-size: 16px 16px;
+}
+
+label {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -60%);
+          transform: translate(-50%, -60%);
+  -webkit-tap-highlight-color: transparent;
+}
+label:focus, label:active {
+  outline: none;
+}
+label input {
+  display: none;
+}
+label i {
+  display: block;
+  width: 100px;
+  height: 100px;
+  background: #CCC;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 0 0 2px #000, inset 0 0 0 3px rgba(0, 0, 0, 0.2), inset 0 0 20px 0 white;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+label i:before, label i:after {
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+label i:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: 5px solid #000;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+label i:after {
+  content: "";
+  display: block;
+  width: 5px;
+  background: #000;
+  position: absolute;
+  height: 30px;
+  left: 50%;
+  top: 25%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  box-shadow: 0 0 0 6px #CCC;
+}
+label input:checked + i {
+  box-shadow: 0 0 0 2px #000, inset 0 0 0 2px rgba(0, 0, 0, 0.2), inset 0 0 20px 0 rgba(0, 0, 0, 0.5);
+}
+label input:checked + i:before {
+  border-color: #E64A19;
+}
+label input:checked + i:after {
+  background: #E64A19;
+}
+label:hover {
+  cursor: pointer;
+}
