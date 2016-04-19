@@ -1,0 +1,263 @@
+* {
+  box-sizing: border-box;
+}
+
+//VARIABLES
+//Black
+$black-100: 	rgba(0,0,0,1);
+$black-90: 		rgba(0,0,0,0.9);
+$black-80: 		rgba(0,0,0,0.8);
+$black-70: 		rgba(0,0,0,0.7);
+$black-60: 		rgba(0,0,0,0.6);
+$black-50: 		rgba(0,0,0,0.5);
+$black-40: 		rgba(0,0,0,0.4);
+$black-30: 		rgba(0,0,0,0.3);
+$black-20: 		rgba(0,0,0,0.2);
+$black-10: 		rgba(0,0,0,0.1);
+
+//White
+$white-100: 	rgba(255,255,255,1);
+$white-90: 		rgba(255,255,255,0.9);
+$white-80: 		rgba(255,255,255,0.8);
+$white-70: 		rgba(255,255,255,0.7);
+$white-60: 		rgba(255,255,255,0.6);
+$white-50: 		rgba(255,255,255,0.5);
+$white-40: 		rgba(255,255,255,0.4);
+$white-30: 		rgba(255,255,255,0.3);
+$white-20: 		rgba(255,255,255,0.2);
+$white-10: 		rgba(255,255,255,0.1);
+
+//Invisible
+$transparent: 	rgba(255,255,255,0);
+
+//COLORS
+$light-grey: #e0dfe1;
+$grey: #9f9e9f;
+$white: #ffffff;
+$yellow: #f1c50e;
+$yellow-A: #f39e13;
+
+$yellow-50: rgba(242, 167, 18, 0.5);
+
+//ANIMATIONS stuff
+$hover: all, 0.2s, ease-in;
+$slide: all, 0.3s,  cubic-bezier(.55,0,.1,1);
+$slide-delay: all, 0.4s 0.1s,  cubic-bezier(.55,0,.1,1);
+$slide-slow: all, 0.5s,  cubic-bezier(.55,0,.1,1);
+$zoom: all, 1s,  cubic-bezier(.55,0,.1,1);
+$zoom-slow: all, 2.4s,  cubic-bezier(.55,0,.1,1);
+//MIXINS
+// ADDS A BROWSER PREFIX TO THE PROPERTY
+@mixin css3-prefix($property, $value) {
+    -webkit-#{$property}: #{$value};
+    -khtml-#{$property}: #{$value};
+    -moz-#{$property}: #{$value};
+    -ms-#{$property}: #{$value};
+    -o-#{$property}: #{$value};
+    #{$property}: #{$value};
+}
+// TRANSFORM
+@mixin transform($params) {
+    @include css3-prefix('transform', $params);
+}
+//FONT IMPORT
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,900);
+
+body {
+  background-color: #ffffff;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+}
+
+.main-wrapper {
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.bg {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url(http://deghq.com/yapp/front-labs/codepen-assets/taxi.jpg);
+  background-size: cover;
+}
+
+.form-wrapper {
+  margin: 0 auto;
+  width: 385px;
+  position: relative;
+  
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 500%;
+    bottom: 100%;
+    left: -250%;
+    height: 200%;
+    background-color: $yellow-50;
+  }
+  
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 500%;
+    top: 100%;
+    left: -250%;
+    height: 200%;
+    background-color: $yellow-50;
+  }
+  
+  &.inner {
+    &:before {
+      left: 100%;
+        height: 100%;
+      top: 0;
+    }
+    
+    &:after {
+      left: -500%;
+        height: 100%;
+      top: 0;
+    }
+  }
+  
+  .form {
+  overflow: hidden;
+  }
+}
+
+.form-header {
+  padding: 25px 20px 20px 20px;
+  background-color: $white;
+  position: relative;
+  
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 120%;
+    height: 50px;
+    transform: rotate(3deg);
+    background-color: $white;
+    left: -10%;
+    bottom: -10px;
+    z-index: 1;
+  }
+  
+  h3 {
+    text-transform: uppercase;
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: 900;
+    font-size: 18px;
+    position: relative;
+    z-index: 2;
+    letter-spacing: -0.5px;
+    margin: 0 25%;
+    
+    span {
+      font-weight: 400;
+    }
+  }
+  
+  .icon {
+    display: inline-block;
+    vertical-align: middle;
+      width: 24px;
+      height: 24px;
+    position: relative;
+    z-index: 3;
+    cursor: pointer;
+    
+    &.icon-back {
+      &:before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 8px;
+        width: 8px;
+        height: 8px;
+        border-top: 2px solid $light-grey;
+        border-left: 2px solid $light-grey;
+        transform: rotate(-45deg);
+      }
+    }
+    
+    &.icon-menu {
+      &:before {
+        content: "";
+        position: absolute;
+        top: 11px;
+        width: 14px;
+        right: 0;
+        height: 2px;
+        background-color: $light-grey;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        display: block;
+        right: 0;
+        top: 6px;
+        height: 8px;
+        width: 14px;
+        border-top: 2px solid $light-grey;
+        border-bottom: 2px solid $light-grey;
+      }
+    }
+  }
+}
+
+.form-content {
+  position: relative;
+  background-color: $black-80;
+  min-height: 200px;
+  padding: 60px 35px;
+}
+input {
+    display: block;
+    padding: 10px 20px;
+    width: 100%;
+    border: 1px solid $white-40;
+    border-radius: 6px;
+    background-color: $transparent;
+    margin-bottom: 15px;
+    color: $white;
+  outline: none;
+  }
+
+input[type="password"] {
+}
+.button {
+    width: 120px;
+    background-color: $yellow-A;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    color: $white;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    margin-left: -60px;
+  z-index: 2;
+  cursor: pointer;
+  border-radius: 6px;
+  -webkit-box-shadow: 0px 0px 25px 0px $black-60;
+-moz-box-shadow: 0px 0px 25px 0px $black-60;
+box-shadow: 0px 0px 25px 0px $black-60;
+  }
+
+#links{position:absolute;bottom:0px;left:0px;width:100%;height:50px;font-size:13px;font-family:tahoma;color:#fff;}
+#links a{text-decoration:none;font-size:2.3em;color:#fff;}
+#twitter{position:absolute;bottom:15px;right:20px;}
+#pens{position:absolute;bottom:15px;left:20px;}
