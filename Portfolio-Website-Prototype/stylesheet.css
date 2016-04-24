@@ -1,0 +1,329 @@
+/****** Main Styles *****/
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+}
+
+
+/*Using table display allows for vertical centering*/
+
+section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.separator {
+  max-width: 300px;
+}
+
+.separator-light {
+  border-top: solid 5px #fff;
+  color: #fff;
+}
+
+.separator-dark {
+  border-top: solid 5px;
+}
+
+.special {
+  color: #333;
+}
+
+
+/****** Navigation Styles *****/
+
+#navigation {
+  padding: 0;
+}
+
+.navbar {
+  margin: 0;
+}
+
+#mobile-nav {
+  font-size: 1.4em;
+  display: none;
+}
+
+
+/****** Intro Section Styles *****/
+
+#heading {
+  background: transparent;
+  min-height: 100%;
+  position: relative;
+}
+
+#heading:before {
+  content: ' ';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+  /*By using the before psuedo-class, I can have the background image and apply a filter*/
+  background: url("https://dl.dropboxusercontent.com/u/42615722/portfolio/photo-1416339442236-8ceb164046f8.jpeg") center center fixed no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-filter: brightness(50%);
+  -moz-filter: brightness(50%);
+  -o-filter: brightness(50%);
+  -ms-filter: brightness(50%);
+  filter: brightness(50%);
+}
+
+.intro-text {
+  color: #fff;
+  padding: 100px 0;
+}
+
+
+/****** Portfolio Section Styles *****/
+
+
+/*Figure styles taken from Codrops Hover Effects tut, slightly modified*/
+
+figure {
+  position: relative;
+  overflow: hidden;
+  margin: 10px auto;
+  max-width: 578px;
+  /*Got rid of float and added max-width along with margin to prevent background bleed that made it look off center*/
+  max-height: 398px;
+  height: auto;
+  cursor: pointer;
+}
+
+figure img {
+  position: relative;
+  display: block;
+  opacity: 0.6;
+}
+
+figure figcaption {
+  padding: 2em;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+figure figcaption::before,
+figure figcaption::after {
+  pointer-events: none;
+}
+
+figure figcaption,
+figure figcaption > a {
+  /*Provides positioning for the slide up of the caption*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Anchor will cover the whole item by default */
+
+
+/* For some effects it will show as a button */
+
+figure figcaption > a {
+  /*Hides View More Text from view in links*/
+  z-index: 1000;
+  text-indent: 200%;
+  white-space: nowrap;
+  font-size: 0;
+  opacity: 0;
+}
+
+figure h2 {
+  word-spacing: -0.15em;
+  font-weight: 300;
+}
+
+figure h2 span {
+  font-weight: 700;
+}
+
+figure h2,
+figure p {
+  margin: 0;
+}
+
+figure p {
+  letter-spacing: 1px;
+  font-size: 68.5%;
+}
+
+figure.effect-portfolio {
+  background: #333;
+}
+
+figure.effect-portfolio img,
+figure.effect-portfolio h2 {
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+}
+
+figure.effect-portfolio img {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+figure.effect-portfolio h2,
+figure.effect-portfolio p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 30px;
+}
+
+figure.effect-portfolio p {
+  text-transform: none;
+  font-size: 90%;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(0, 50px, 0);
+  transform: translate3d(0, 50px, 0);
+}
+
+figure.effect-portfolio:hover img {
+  -webkit-transform: translate3d(0, -80px, 0);
+  transform: translate3d(0, -80px, 0);
+}
+
+figure.effect-portfolio:hover h2 {
+  -webkit-transform: translate3d(0, -100px, 0);
+  transform: translate3d(0, -100px, 0);
+}
+
+figure.effect-portfolio:hover p {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+
+/****** About Section Styles *****/
+
+#about-me {
+  font-size: 1.5em;
+  background: #40CED7;
+  color: #fff;
+}
+
+
+/****** Contact Section Styles *****/
+
+.social {
+  list-style: none;
+  padding: 0px;
+}
+
+.social li {
+  display: inline;
+  margin: 10px;
+}
+
+.social li a {
+  display: inline-block;
+  color: #fc6e51;
+  width: 50px;
+  height: 50px;
+}
+
+#free-code-camp, #github, #linked-in, #twitter {
+  border-radius: 50%;
+  border: solid 2px #40CED7;
+  
+  font-size: 1.5em;
+  padding: 10px;
+}
+
+
+/****** Media Queries *****/
+
+@media only screen and (max-width: 950px) {
+  figure.effect-portfolio p {
+    font-size: 90%
+  }
+  figure h2 {
+    font-size: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /*Once 767 width reached, hide normal nav and display icon nav*/
+  #navigation {
+    display: none;
+  }
+  /*Using floats on header and right classes help them stay in the right place on screen resize*/
+  .navbar-header {
+    display: inline-block;
+    float: left;
+  }
+  .navbar-right {
+    float: right;
+  }
+  #mobile-nav {
+    display: inline;
+    white-space: nowrap;
+  }
+  #mobile-nav ul li {
+    display: inline-block;
+    padding: 0;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
+  /* Hide hover effects for mobile */
+  figure.effect-portfolio:hover img {
+    -webkit-transform: none;
+    transform: none;
+  }
+  figure.effect-portfolio:hover h2 {
+    -webkit-transform: none;
+    transform: none;
+  }
+  figure.effect-portfolio:hover p {
+    opacity: 0;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 950px) {
+  .intro-text {
+    color: #fff;
+    padding: 200px 0;
+  }
+}
+
+@media only screen and (min-width: 950px) {
+  .intro-text {
+    color: #fff;
+    padding: 300px 0;
+  }
+}
