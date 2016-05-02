@@ -59,12 +59,12 @@ $(document).ready(function() {
   $('#new-quote').on('click', getQuote);
   $('#tweet-quote').on('click', function() {
     if(!inIframe()) {
-      openURL('https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent('"' + currentQuote + '" ' + currentAuthor));
+      openURL('https://www.linkedin.com/in/zohaib-shahzad-84ab9248' + encodeURIComponent('"' + currentQuote + '" ' + currentAuthor));
     }
   });
   $('#tumblr-quote').on('click', function() {
     if(!inIframe()) {
-      openURL('https://www.tumblr.com/widgets/share/tool?posttype=quote&tags=quotes,freecodecamp&caption='+encodeURIComponent(currentAuthor)+'&content=' + encodeURIComponent(currentQuote));
+      openURL('https://github.com/Hollow27'+encodeURIComponent(currentAuthor)+'&content=' + encodeURIComponent(currentQuote));
     }
   });
 });
